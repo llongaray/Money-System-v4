@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Droob7&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Droob7', sans-serif; /* Fonte padrão */
+    display: flex;
+}
+/* Definindo variáveis para a largura do menu e a largura do main */
+:root {
+    --menu-width: 20vw;
+    --collapsed-menu-width: 6vw;
+}
+
+/* Paleta de cores */
+:root {
+    --color-1: #1e3545;
+    --color-2: #33697b;
+    --color-3: #ffffff;
+    --color-4: #868b94;
+    --color-5: #e0e0dd;
+    --color-6: #f0f0f5;
+}
+
+/* Estilo dos ícones de seta para baixo */
+.options h2 {
+    position: relative; /* Estabelece contexto de posicionamento para o ícone */
+    margin: 0;
+    user-select: none;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.options h2 div {
+    margin-left: 10px;
+}
+
+.options h2 div span {
+    font-size: 11px; /* Mantém o tamanho da letra do título */
+    margin: 1px;
+    padding: 0;
+}
+
+/* Estilização dos ícones de identificação */
+.options h2 div i {
+    position: relative;
+    top: 4px;
+    font-size: 12px; /* Tamanho do ícone */
+}
+
+/* Estilo dos ícones de seta para baixo */
+.options h2 i {
+    position: absolute; /* Posicionamento absoluto em relação ao h2 */
+    top: 50%; /* Alinha verticalmente ao centro */
+    right: 5px; /* Posiciona o ícone à direita */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    color: #ffffff; /* Cor do ícone */
+    font-size: 12px; /* Tamanho do ícone */
+}
+
+/* Estilo do menu lateral */
+#menu {
+    display: flex;
+    flex-direction: column;
+    width: var(--menu-width);
+    height: 100vh;
+    background-color: #1e3545;
+    color: #ffffff;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    transition: width 0.6s ease;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+}
+
+#menu.collapsed {
+    width: var(--collapsed-menu-width);
+    overflow-x: hidden;
+}
+
+#menu.collapsed .options h2 div {
+    display: flex;
+    margin: 0 auto;
+}
+
+#menu.collapsed .options h2 div i {
+    display: block;
+    position: relative;
+    top: 4px;
+    font-size: 12px; /* Tamanho do ícone */
+    margin-bottom: 25px;
+
+}
+
+#menu.collapsed .logo img,
+#menu.collapsed footer,
+#menu.collapsed .options h2 i,
+#menu.collapsed .options h2 div span,
+#menu.collapsed .options ul,
+#menu.collapsed .options ul li {
+    display: none;
+}
+
+#menu .logo {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+#menu .logo img {
+    height: 40px; /* Definindo a altura da imagem */
+    margin-right: auto; /* Empurrando a imagem para a esquerda */
+}
+
+#menu .options {
+    padding-top: 2px;
+    flex-grow: 1; /* Permite que este bloco cresça para ocupar o espaço restante */
+}
+
+#menu .options ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 35px;
+    display: none;
+}
+
+#menu .options ul li {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+#menu footer {
+    width: 87%;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    padding: 10px;
+}
+
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #373e4a;
+    color: #e0e0dd;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Definindo a largura igual a 100% do main */
+    box-sizing: border-box; /* Considerando padding e borda na largura */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Movendo .user-info para a direita */
+}
+
+.user-info p {
+    margin-right: 10px;
+}
+
+#menu-toggle {
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Estilo do conteúdo principal */
+main {
+    background-color: #ffffff;
+    height: 100vh;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.container-main {
+    padding: 20px;
+}
+
+/* Estilização específica para títulos e parágrafos dentro do conteúdo principal */
+.container-main h1,
+.container-main h2,
+.container-main h3 {
+    color: #33697b;
+    background-color: #f0f0f5;
+    padding: 10px;
+}
+
+.container-main p {
+    color: #373e4a;
+    background-color: #e0e0dd;
+    padding: 10px;
+}

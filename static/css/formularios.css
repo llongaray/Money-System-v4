@@ -1,0 +1,139 @@
+/* Importando fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=SF+Droob7&display=swap');
+
+/* Definindo fonte padrão */
+body {
+    font-family: 'SF Droob7', sans-serif; /* Define a fonte padrão para o corpo */
+}
+
+/* Paleta de cores */
+:root {
+    --color-1: #1e3545; /* Cor principal */
+    --color-2: #33697b; /* Cor secundária */
+    --color-3: #ffffff; /* Cor de fundo */
+    --color-4: #868b94; /* Cor do texto */
+    --color-5: #e0e0dd; /* Outra cor */
+    --color-6: #f0f0f5; /* Outra cor */
+}
+
+/* Estilo do formulário */
+form {
+    margin: 0 auto; /* Centraliza o formulário na página */
+    max-width: 720px; /* Define a largura máxima do formulário */
+    padding: 20px;
+    background-color: var(--color-5); /* Cor de fundo do formulário */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+}
+
+/* Estilo dos rótulos */
+label {
+    font-weight: bold; /* Deixa os rótulos em negrito */
+    color: var(--color-1); /* Cor dos rótulos */
+    font-size: 10pt; /* Tamanho da fonte dos rótulos */
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%; /* Define a largura dos campos de entrada */
+    padding: 10px; /* Adiciona preenchimento aos campos de entrada */
+    margin-bottom: 15px; /* Adiciona margem inferior aos campos de entrada */
+    border: 1px solid var(--color-4); /* Adiciona borda aos campos de entrada */
+    border-radius: 5px; /* Adiciona borda arredondada aos campos de entrada */
+    box-sizing: border-box;
+    background-color: var(--color-3); /* Cor de fundo dos campos de entrada */
+}
+
+/* Estilo dos checkboxes */
+input[type="checkbox"] {
+    margin-right: 5px; /* Adiciona margem à direita dos checkboxes */
+}
+
+/* Estilo do botão de envio */
+form .box-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Define a largura do contêiner do botão de envio */
+    height: 45px; /* Define a altura do contêiner do botão de envio */
+    margin-top: 8px; /* Adiciona margem superior ao contêiner do botão de envio */
+}
+
+button[type="submit"] {
+    padding: 10px; /* Adiciona preenchimento ao botão de envio */
+    border: none; /* Remove a borda do botão de envio */
+    border-radius: 5px; /* Adiciona borda arredondada ao botão de envio */
+    background-color: var(--color-2); /* Cor de fundo do botão de envio */
+    color: var(--color-3); /* Cor do texto do botão de envio */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão de envio */
+}
+
+button[type="submit"]:hover {
+    background-color: #254e64; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo dos grupos de formulário */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px; /* Adiciona margem acima dos grupos de formulário */
+}
+
+.form-group .setor-form {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Estilo dos elementos box-form */
+.form-group .setor-form .box-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px; /* Adiciona margem acima dos elementos box-form */
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.form-group .setor-form .width100 {
+    width: 100%;
+}
+
+.dataFilter {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.dataFilter label {
+    margin-right: 10px;
+}
+
+.dataFilter input {
+    padding: 5px;
+    margin: 0 10px 0 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.dataFilter button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 15px;
+}
+
+.dataFilter button:hover {
+    background-color: #0056b3;
+}

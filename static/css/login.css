@@ -1,0 +1,111 @@
+/* Paleta de cores */
+:root {
+    --color-1: #1e3545;
+    --color-2: #33697b;
+    --color-3: #ffffff;
+    --color-4: #868b94;
+    --color-5: #e0e0dd;
+    --color-6: #f0f0f5;
+    --color-7: #626e84;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Droob7', sans-serif; /* Fonte padrão */
+}
+
+/* Estilos da parte superior da página */
+.top-view-login {
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-3); /* Usando a cor de destaque */
+}
+
+.top-view-login img {
+    max-width: 40%;
+}
+
+/* Estilos da parte inferior da página */
+.bottom-view-form {
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-1); /* Usando a cor principal */
+}
+
+.bottom-view-form form {
+    display: flex;
+    flex-direction: column; /* Alterado para 'column' para uma melhor disposição dos elementos */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+}
+
+
+.bottom-view-form form span.camp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 300px;
+    background-color: var(--color-7);
+    border-radius: 2px;
+    margin: 15px 0;
+    padding: 5px 10px;
+}
+
+.bottom-view-form form span.camp i {
+    color: black;
+    border-right: 1px solid black ;
+    padding-right: 20px;
+}
+
+.bottom-view-form form span.camp input {
+    background: none;
+    border: none;
+    color: var(--color-3);
+    height: 25px;
+    width: 225px;
+    padding: 5px;
+    margin: 15px 0;
+    transition: border-bottom-color 0.3s; /* Adiciona uma transição suave para a mudança de cor da borda */
+    caret-color: black; /* Define a cor do cursor de texto para preto */
+}
+
+.bottom-view-form form span.camp input:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    border-bottom-color: transparent; /* Torna a borda inferior transparente quando o campo está focado */
+}
+
+.bottom-view-form form span.camp input::placeholder {
+    color: var(--color-3); /* Define a cor do placeholder para --color-3 */
+}
+
+.bottom-view-form form .button {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    width: 300px;
+    height: 35px;
+    padding: 4px 9px;
+    border: 1px solid var(--color-3);
+    cursor: pointer;
+}
+
+.bottom-view-form form .button input {
+    background: none;
+    border: none;
+    flex: 1; /* Ocupa todo o espaço disponível à esquerda */
+    color: var(--color-3); /* Cor do texto igual a --color-3 */
+    cursor: pointer;
+}
+
+.bottom-view-form form .button i {
+    flex-shrink: 0; /* Impede que o ícone seja redimensionado */
+    color: var(--color-3); /* Cor do ícone igual a --color-3 */
+    margin-left: auto; /* Move o ícone para a extrema direita */
+    margin-right: 5px; /* Espaçamento à direita do ícone */
+    cursor: pointer;
+}
